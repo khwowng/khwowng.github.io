@@ -2,7 +2,7 @@
 slug: "ryze-overview"
 title: "Ryze -  Project Overview & Starter Guide"
 description: "Complete overview and feature set of Ryze Astro starter along with layouts and components included."
-date: 2025-11-20
+date: 2024-11-20
 author: "Rahul"
 tags: ["ryze", "astro", "template", "guide"]
 featured: true

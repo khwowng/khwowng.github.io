@@ -20,15 +20,15 @@
 
 /* COLOR SCHEME */
 .dark {
-  --background: var(--color-zinc-800);
-  --foreground: var(--color-zinc-300);
+  --background: var(--color-stone-950);
+  --foreground: var(--color-white);
   --accent: var(--color-yellow-500);
 }
 
 .light {
   --background: var(--color-gray-100);
   --foreground: var(--color-gray-800);
-  --accent: var(--color-red-500);
+  --accent: var(--color-emerald-500);
 }
 
 /* CODE BLOCK */
