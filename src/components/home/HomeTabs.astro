@@ -1,0 +1,68 @@
+---
+import { Tabs, TabsList, TabsPanel, TabsTab } from "accessible-astro-components";
+---
+  <Tabs>
+    <TabsList class="flex w-full border-b">
+      <TabsTab
+        id="tab-skill"
+        controls="panel-skill"
+        class="flex-1 text-center py-3 font-medium"
+        selected
+      >
+        Skills
+      </TabsTab>
+      <TabsTab
+        id="tab-edu"
+        controls="panel-edu"
+        class="flex-1 text-center py-3 font-medium"
+      >
+        Education
+      </TabsTab>
+
+      <TabsTab
+        id="tab-exp"
+        controls="panel-exp"
+        class="flex-1 text-center py-3 font-medium"
+      >
+        Experience
+      </TabsTab>
+    </TabsList>
+
+    <TabsPanel
+      id="panel-skill"
+      labelledby="tab-skill"
+      class="p-6"
+    >
+      <ul class="grid grid-cols-2 gap-2">
+        <li>JavaScript / TypeScript</li>
+        <li>React / Astro</li>
+        <li>Tailwind CSS</li>
+        <li>Git / GitHub</li>
+      </ul>
+    </TabsPanel>
+
+    <TabsPanel
+      id="panel-edu"
+      labelledby="tab-edu"
+      selected
+      class="p-6"
+    >
+      <ul class="space-y-2">
+        <li>B.Sc. Computer Science — Germany</li>
+        <li>Exchange Student — Vietnam</li>
+      </ul>
+    </TabsPanel>
+
+    <TabsPanel
+      id="panel-exp"
+      labelledby="tab-exp"
+      class="p-6"
+    >
+      <ul class="space-y-2">
+        <li>Frontend Developer Intern</li>
+        <li>Student Assistant (CS)</li>
+      </ul>
+    </TabsPanel>
+
+
+  </Tabs>
