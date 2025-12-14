@@ -1,0 +1,26 @@
+---
+import { SITE_TITLE } from '../consts';
+import Socials from "./Socials.astro";
+import { DarkMode } from "accessible-astro-components";
+---
+
+
+<header>
+	<nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+		<div class="flex items-center gap-8">
+			<a href="/" class="text-2xl font-semibold">
+				{SITE_TITLE}
+			</a>
+
+			<div class="hidden items-center gap-6 text-lg md:flex">
+				<a href="/" class="hover:underline">Home</a>
+				<a href="/blog" class="hover:underline">Blog</a>
+			</div>
+		</div>
+
+		<div class="flex items-center gap-4">
+			<Socials />
+			<DarkMode />
+		</div>
+	</nav>
+</header>
