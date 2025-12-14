@@ -1,0 +1,11 @@
+---
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeTabs from "../components/home/HomeTabs.astro"
+---
+
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<section class="w-full">
+	<HomeTabs />
+	</section>
+</BaseLayout>

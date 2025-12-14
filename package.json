@@ -1,0 +1,21 @@
+{
+  "name": "blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "node_modules/.bin/astro dev",
+    "build": "node_modules/.bin/astro build",
+    "preview": "node_modules/.bin/astro preview",
+    "astro": "node_modules/.bin/astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/rss": "^4.0.14",
+    "@astrojs/sitemap": "^3.6.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "accessible-astro-components": "^5.0.3",
+    "astro": "^5.16.5",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.18"
+  }
+}

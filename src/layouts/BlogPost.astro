@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+
+type Frontmatter = CollectionEntry<"blog">["data"];
+const { frontmatter, readTime } = Astro.props as {
+	frontmatter: Frontmatter;
+	readTime?: number;
+};
+---
+
+<BaseLayout
+	title={frontmatter.title}
+	description={frontmatter.description}
+	date={frontmatter.date}
+>
+	<main class="mx-auto max-w-3xl px-4 py-12">
+		<article class="prose prose-neutral dark:prose-invert mx-auto">
+			<header class="mb-8 text-center">
+				{frontmatter.date && (
+					<p class="mb-2 text-sm text-neutral-500">
+						<FormattedDate date={frontmatter.date} />
+						{readTime && <> · {readTime} min read</>}
+					</p>
+				)}
+
+				<h1 class="mb-4 text-3xl font-semibold tracking-tight">
+					{frontmatter.title}
+				</h1>
+
+				<hr class="border-neutral-300 dark:border-neutral-700" />
+			</header>
+
+			<slot />
+		</article>
+	</main>
+</BaseLayout>
