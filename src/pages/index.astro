@@ -1,23 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Introduction from "../components/Introduction.astro";
-import Featured from "../components/Featured.astro";
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<BaseLayout
-  title="Ryze"
-  description="A minimalist Astro starter for personal blogs."
-  author="Rahul"
-  url="https://ryze.pages.dev"
->
-  <div class="center">
-    <section>
-      <Introduction />
-    </section>
-    <hr />
-    <section>
-      <Featured />
-    </section>
-{/* TODO: add sections */}
-  </div>
-</BaseLayout>
+<Layout>
+	<Welcome />
+</Layout>
