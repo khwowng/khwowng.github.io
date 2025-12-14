@@ -1,15 +1,16 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
 import "../styles/global.css";
-import { SITE_TITLE } from "../consts";
+import { SITE_TITLE } from "../consts.ts";
 
 interface Props {
   title: string;
   description: string;
+  date?: Date;
 }
 
-const { title, description } = Astro.props;
+const { title, description, date } = Astro.props;
 ---
 
 <!doctype html>
@@ -39,13 +40,11 @@ const { title, description } = Astro.props;
   />
 </head>
 
-<body>
-<Header />
-
-<main class="mx-auto max-w-6xl px-6 py-12">
-  <slot />
-</main>
-
-<Footer />
+<body class="min-h-screen flex flex-col">
+  <Header />
+  <main class="mx-auto px-6 py-12 flex-1">
+    <slot />
+  </main>
+  <Footer />
 </body>
 </html>

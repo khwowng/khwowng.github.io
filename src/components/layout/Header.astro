@@ -1,5 +1,5 @@
 ---
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE } from '../../consts.ts';
 import Socials from "./Socials.astro";
 import { DarkMode } from "accessible-astro-components";
 ---
@@ -11,7 +11,6 @@ import { DarkMode } from "accessible-astro-components";
 			<a href="/" class="text-2xl font-semibold">
 				{SITE_TITLE}
 			</a>
-
 			<div class="hidden items-center gap-6 text-lg md:flex">
 				<a href="/" class="hover:underline">Home</a>
 				<a href="/blog" class="hover:underline">Blog</a>

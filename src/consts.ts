@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'kth.';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const PAGE_SIZE = 25;
