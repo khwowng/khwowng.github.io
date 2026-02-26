@@ -2,35 +2,34 @@
 import type { CollectionEntry } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import FormattedDate from "../components/FormattedDate.astro";
+import Prose from "../components/Prose.astro";
 
 type Frontmatter = CollectionEntry<"blog">["data"];
 const { frontmatter, readTime } = Astro.props as {
-	frontmatter: Frontmatter;
-	readTime?: number;
+  frontmatter: Frontmatter;
+  readTime?: number;
 };
 ---
 
 <BaseLayout
-	title={frontmatter.title}
-	description={frontmatter.description}
-	date={frontmatter.date}
+  title={frontmatter.title}
+  description={frontmatter.description}
+  date={frontmatter.date}
 >
-	<main class="py-12">
-		<article class="prose prose-neutral dark:prose-invert mx-auto">
-			<header class="mb-8 text-center">
-				<h1 class="mb-2 text-3xl font-semibold tracking-tight">
-					{frontmatter.title}
-				</h1>
-				{frontmatter.date && (
-					<p class="mb-4 text-sm text-neutral-500">
-						<FormattedDate date={frontmatter.date} />
-						{readTime && <> · {readTime} min read</>}
-					</p>
-				)}
-				<hr class="border-neutral-300 dark:border-neutral-700" />
-			</header>
-
-			<slot />
-		</article>
-	</main>
+  <main class="py-12 px-6 mx-auto max-w-full">
+    <h1 class="mb-2 text-3xl font-semibold tracking-tight text-center">
+      {frontmatter.title}
+    </h1>
+    {
+      frontmatter.date && (
+        <p class="mb-8 text-sm text-neutral-600 dark:text-neutral-400 text-center">
+          <FormattedDate date={frontmatter.date} />
+          {readTime && <> · {readTime} min read</>}
+        </p>
+      )
+    }
+    <Prose>
+      <slot />
+    </Prose>
+  </main>
 </BaseLayout>
