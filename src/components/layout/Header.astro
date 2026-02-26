@@ -2,25 +2,66 @@
 import { SITE_TITLE } from '../../consts.ts';
 import Socials from "./Socials.astro";
 import { DarkMode } from "accessible-astro-components";
+
+const pathname = Astro.url.pathname;
 ---
 
-
 <header>
-	<nav class="flex items-center justify-between py-6">
-		<div class="flex items-center gap-8">
-			<a href="/" class="text-2xl font-semibold">
-				{SITE_TITLE}
-			</a>
-			<div class="hidden items-center gap-6 text-lg md:flex">
-				<a href="/" class="hover:underline">About</a>
-				<a href="/blog" class="hover:underline">Blog</a>
-				<a href="/project" class="hover:underline">Projects</a>
-			</div>
-		</div>
+  <nav class="relative flex items-center justify-between py-6">
+    
+    <!-- Left -->
+    <div class="flex items-center gap-8">
+      <a href="/" class="text-2xl font-semibold">
+        {SITE_TITLE}
+      </a>
+    </div>
 
-		<div class="flex items-center gap-4">
-			<Socials />
-			<DarkMode />
-		</div>
-	</nav>
+    <!-- Center Pills -->
+    <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-2 
+  bg-gray-200/60 dark:bg-neutral-800/60 
+  backdrop-blur-md px-2 py-2 rounded-full 
+  border border-gray-300 dark:border-neutral-700">
+
+  <a
+    href="/"
+    class={`px-5 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+      pathname === "/"
+        ? "bg-white dark:bg-neutral-700 text-black dark:text-white shadow-sm"
+        : "text-gray-700 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-neutral-700/70"
+    }`}
+  >
+    about
+  </a>
+
+  <a
+    href="/project"
+    class={`px-5 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+      pathname.startsWith("/project")
+        ? "bg-white dark:bg-neutral-700 text-black dark:text-white shadow-sm"
+        : "text-gray-700 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-neutral-700/70"
+    }`}
+  >
+    projects
+  </a>
+
+  <a
+    href="/blog"
+    class={`px-5 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+      pathname.startsWith("/blog")
+        ? "bg-white dark:bg-neutral-700 text-black dark:text-white shadow-sm"
+        : "text-gray-700 dark:text-gray-300 hover:bg-white/70 dark:hover:bg-neutral-700/70"
+    }`}
+  >
+    blogs
+  </a>
+
+</div>
+
+    <!-- Right -->
+    <div class="flex items-center gap-4">
+      <Socials />
+      <DarkMode />
+    </div>
+
+  </nav>
 </header>
