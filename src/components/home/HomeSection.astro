@@ -1,0 +1,23 @@
+---
+type Props = {
+  title: string;
+  open?: boolean;
+  bordered?: boolean;
+};
+
+const { title, open = true, bordered = true } = Astro.props;
+---
+
+<details
+  open={open}
+  class={`group ${bordered ? "border-t border-gray-200 dark:border-neutral-800" : ""} pt-4 sm:pt-6`}
+>
+  <summary class="flex justify-between items-center cursor-pointer text-xl sm:text-2xl font-semibold">
+    {title}
+    <span class="text-sm sm:text-base transition group-open:rotate-180">⌄</span>
+  </summary>
+
+  <div class="mt-4 sm:mt-6">
+    <slot />
+  </div>
+</details>

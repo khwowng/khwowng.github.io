@@ -1,0 +1,53 @@
+---
+import HomeSection from "./HomeSection.astro";
+import TimelineItem from "./TimelineItem.astro";
+---
+
+<section class="py-12 sm:py-16 space-y-8 sm:space-y-12">
+  <div>
+    <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">About Me</h2>
+    <p class="leading-relaxed">
+      Computer Science student focused on frontend development and modern web technologies.
+      Interested in building clean, performant, and user-friendly interfaces.
+    </p>
+  </div>
+
+  <HomeSection title="Experience" open>
+    <div class="space-y-6 sm:space-y-8">
+      <TimelineItem
+        title="Frontend Developer Intern"
+        description="Built UI components and improved performance."
+        time="2024"
+      />
+      <TimelineItem
+        title="Student Assistant (CS)"
+        description="Assisted in programming labs and grading."
+        time="2022 — 2024"
+      />
+    </div>
+  </HomeSection>
+
+  <HomeSection title="Education" open>
+    <div class="space-y-6 sm:space-y-8">
+      <TimelineItem
+        title="B.Sc. Computer Science"
+        description="Germany"
+        time="2021 — 2025"
+      />
+      <TimelineItem
+        title="Exchange Student"
+        description="Vietnam"
+        time="2023"
+      />
+    </div>
+  </HomeSection>
+
+  <HomeSection title="Skills" open>
+    <ul class="list-disc list-inside space-y-2">
+      <li>JavaScript / TypeScript</li>
+      <li>React / Astro</li>
+      <li>Tailwind CSS</li>
+      <li>Git / GitHub</li>
+    </ul>
+  </HomeSection>
+</section>
