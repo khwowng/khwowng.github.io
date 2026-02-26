@@ -14,22 +14,22 @@ const { title, subtitle, time, open = false } = Astro.props;
   <summary class="grid sm:grid-cols-[auto_1fr_auto] items-start gap-x-4 cursor-pointer list-none">
 
     <!-- Toggle Indicator -->
-    <span class="mt-1 transition-transform duration-200 group-open:rotate-90">
+    <span class="mt-1 text-teal-600 dark:text-teal-400 transition-transform duration-200 group-open:rotate-90">
       ▶
     </span>
 
     <!-- Title + Subtitle -->
-    <div>
-      <p class="text-lg sm:text-xl font-semibold">
-        {title}
-      </p>
+  <div>
+    <p class="text-l sm:text-xl font-semibold">
+      {title}
+    </p>
 
-      {subtitle && (
-        <p>
-          {subtitle}
-        </p>
-      )}
-    </div>
+    {subtitle && (
+      <p class="text-gray-600 dark:text-gray-400">
+        @ {subtitle}
+      </p>
+    )}
+  </div>
 
     <!-- Time -->
     {time && (
