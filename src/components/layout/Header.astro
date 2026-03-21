@@ -1,74 +1,59 @@
 ---
 import { SITE_TITLE } from '../../consts.ts';
-import Socials from "./Socials.astro";
 import { DarkMode } from "accessible-astro-components";
 
 const pathname = Astro.url.pathname;
+
+const navItems = [
+  { href: "/about", label: "about" },
+  { href: "/blog", label: "blogs" },
+  { href: "/project", label: "projects" },
+];
 ---
 
 <header>
   <nav class="relative flex items-center justify-between py-6">
-
     <!-- Left -->
     <div class="flex items-center gap-8">
       <a
         href="/"
-        class="text-2xl font-semibold text-teal-600 dark:text-teal-400 transition-colors duration-200 hover:opacity-80"
+        class="text-3xl font-bold text-yellow-400 dark:text-yellow-300 transition-colors duration-200 hover:opacity-80"
       >
         {SITE_TITLE}
       </a>
     </div>
 
-    <!-- Center Pills -->
-    <div
-  class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-2
-         px-2 py-2 rounded-xl"
->
-  <a
-    href="/"
-    class={`px-5 py-1.5 rounded-lg text-sm font-medium
-            border-2 border-transparent
-            transition-all duration-200 ${
-      pathname === "/"
-        ? "bg-teal-600/40 dark:bg-teal-400/40 border-teal-600 dark:border-teal-400"
-        : "hover:bg-gray-100 dark:hover:bg-neutral-900/40 hover:-translate-y-0.5"
-    }`}
-  >
-    about
-  </a>
+    <!-- Center Navigation -->
+    <div class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-6">
+      {
+        navItems.map((item) => {
+          const isActive =
+            item.href === "/"
+              ? pathname === "/"
+              : pathname.startsWith(item.href);
 
-  <a
-    href="/project"
-    class={`px-5 py-1.5 rounded-lg text-sm font-medium
-            border-2 border-transparent
-            transition-all duration-200 ${
-      pathname.startsWith("/project")
-        ? "bg-teal-600/40 dark:bg-teal-400/40 border-teal-600 dark:border-teal-400"
-        : "hover:bg-gray-100 dark:hover:bg-neutral-900/40 hover:-translate-y-0.5"
-    }`}
-  >
-    projects
-  </a>
+          return (
+            <a
+              href={item.href}
+              class={`text-lg font-bold uppercase tracking-wider transition-all duration-200 hover:underline hover:underline-offset-4 ${
+                isActive
+                  ? "text-yellow-400 dark:text-yellow-300"
+                  : "text-neutral-600 dark:text-neutral-400 hover:text-yellow-400 dark:hover:text-yellow-300"
+              }`}
+            >
+              {item.label}
+            </a>
+          );
+        })
+      }
+    </div>
 
-  <a
-    href="/blog"
-    class={`px-5 py-1.5 rounded-lg text-sm font-medium
-            border-2 border-transparent
-            transition-all duration-200 ${
-      pathname.startsWith("/blog")
-        ? "bg-teal-600/40 dark:bg-teal-400/40 border-teal-600 dark:border-teal-400"
-        : "hover:bg-gray-100 dark:hover:bg-neutral-900/40 hover:-translate-y-0.5"
-    }`}
-  >
-    blogs
-  </a>
-</div>
+
+
 
     <!-- Right -->
     <div class="flex items-center gap-4">
-      <Socials />
       <DarkMode />
     </div>
-
   </nav>
 </header>

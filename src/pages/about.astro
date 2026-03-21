@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import About from "../components/about/About.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<BaseLayout title={`About | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+  <About />
+</BaseLayout>
