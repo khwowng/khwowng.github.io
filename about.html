@@ -1,29 +1,39 @@
 ---
-layout: page
+layout: default
 title: About
 ---
+<div class="mb-6">
+  <h1 class="text-4xl font-bold text-flexoki-text tracking-tight">About Me</h1>
+  <p class="mt-2 text-xs font-bold uppercase tracking-[0.25em] font-mono text-flexoki-muted whitespace-nowrap">
+    Who I am?
+  </p>
+</div>
+
 <div class="space-y-12">
-  <!-- Hero Section -->
-  <section class="max-w-2xl pt-8">
-    <h1 class="text-3xl font-bold mb-4 text-flexoki-text tracking-tight">About Me</h1>
-    <p class="text-lg leading-relaxed text-flexoki-muted">
-      Hi, I’m <span class="text-flexoki-text font-bold">Thanh Ha</span> — a Computer Science master’s student who enjoys building software. I’m interested in automation, data-driven systems, and making complex processes more efficient.
+  <section>
+    <p class="text-base leading-relaxed text-flexoki-text">
+      I’m Thanh Ha. I enjoy building software and making complex processes more efficient. I'm currently pursuing my
+      Master's degree at HTW Dresden and applying my skills in semiconductor manufacturing automation. Always looking to
+      learn something new and build practical tools.
     </p>
   </section>
 
-  <!-- Experience Section -->
   <section>
-    <div class="flex items-center gap-4 mb-3">
-      <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-flexoki-muted whitespace-nowrap">Experience</h2>
+    <div class="flex items-center gap-4 mb-6">
+      <h2 class="text-xs font-bold uppercase tracking-[0.25em] font-mono text-flexoki-muted whitespace-nowrap">
+        Experience
+      </h2>
       <div class="h-px w-full bg-flexoki-ui"></div>
     </div>
-    
     <div class="space-y-8">
-      <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-x-8 gap-y-1">
-        <h3 class="text-xl font-bold text-flexoki-text">Intern / Working Student – Wafer Test Automation</h3>
-        <span class="text-sm font-bold text-flexoki-muted md:mt-1 uppercase tracking-wider">05/2024 — present</span>
-        <p class="text-flexoki-muted font-medium italic text-sm col-span-full">Robert Bosch Semiconductor Manufacturing Dresden GmbH</p>
-        <ul class="mt-3 space-y-1.5 text-flexoki-muted text-sm list-disc list-inside col-span-full border-l-2 border-flexoki-ui pl-4">
+      <div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+          <h3 class="text-lg font-bold text-flexoki-text">Intern / Working Student – Wafer Test Automation
+          </h3>
+          <span class="text-sm text-flexoki-muted shrink-0 md:ml-4 font-mono">05/2024 — PRESENT</span>
+        </div>
+        <p class="text-flexoki-muted text-sm mb-3">Robert Bosch Semiconductor Manufacturing Dresden GmbH</p>
+        <ul class="space-y-1 text-flexoki-text text-sm list-disc list-inside">
           <li>Developed prototype applications using Oracle APEX</li>
           <li>Automated deployment workflows with Azure DevOps and Ansible</li>
           <li>Prepared and analyzed data for wafer test scheduling prototypes</li>
@@ -31,11 +41,13 @@ title: About
         </ul>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-x-8 gap-y-1">
-        <h3 class="text-xl font-bold text-flexoki-text">Working Student – IT Management</h3>
-        <span class="text-sm font-bold text-flexoki-muted md:mt-1 uppercase tracking-wider">06/2023 — 04/2024</span>
-        <p class="text-flexoki-muted font-medium italic text-sm col-span-full">Dresdner Verkehrsbetriebe AG</p>
-        <ul class="mt-3 space-y-1.5 text-flexoki-muted text-sm list-disc list-inside col-span-full border-l-2 border-flexoki-ui pl-4">
+      <div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+          <h3 class="text-lg font-bold text-flexoki-text">Working Student – IT Management</h3>
+          <span class="text-sm text-flexoki-muted shrink-0 md:ml-4 font-mono">06/2023 — 04/2024</span>
+        </div>
+        <p class="text-flexoki-muted text-sm mb-3">Dresdner Verkehrsbetriebe AG</p>
+        <ul class="space-y-1 text-flexoki-text text-sm list-disc list-inside">
           <li>Supported operational IT management</li>
           <li>Contributed to Software Portfolio Management</li>
           <li>Analyzed and documented internal processes</li>
@@ -44,71 +56,89 @@ title: About
     </div>
   </section>
 
-  <!-- Education Section -->
   <section>
-    <div class="flex items-center gap-4 mb-3">
-      <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-flexoki-muted whitespace-nowrap">Education</h2>
+    <div class="flex items-center gap-4 mb-6">
+      <h2 class="text-xs font-bold uppercase tracking-[0.25em] font-mono text-flexoki-muted whitespace-nowrap">Education
+      </h2>
       <div class="h-px w-full bg-flexoki-ui"></div>
     </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="card bg-flexoki-paper/30 border-flexoki-ui flex flex-col justify-between p-5">
-        <div>
-          <h3 class="text-lg font-bold text-flexoki-text mb-1">M.Sc. Applied Computer Science</h3>
-          <p class="text-flexoki-muted text-xs uppercase tracking-wider font-bold">HTW Dresden | 2025 — Present</p>
+    <div class="space-y-6">
+      <div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+          <h3 class="text-lg font-bold text-flexoki-text">M.Sc. Applied Computer Science</h3>
+          <span class="text-sm text-flexoki-muted shrink-0 md:ml-4 font-mono">2025 — PRESENT</span>
         </div>
-        <p class="text-flexoki-text font-bold mt-4 text-sm">GPA: 1.1</p>
+        <p class="text-flexoki-muted text-sm">HTW Dresden <span class="mx-2">&middot;</span> GPA: 1.1</p>
       </div>
 
-      <div class="card bg-flexoki-paper/30 border-flexoki-ui flex flex-col justify-between p-5">
-        <div>
-          <h3 class="text-lg font-bold text-flexoki-text mb-1">B.Sc. Business Information Systems</h3>
-          <p class="text-flexoki-muted text-xs uppercase tracking-wider font-bold">HTW Dresden | 2020 — 2025</p>
+      <div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-1">
+          <h3 class="text-lg font-bold text-flexoki-text">B.Sc. Business Information Systems</h3>
+          <span class="text-sm text-flexoki-muted shrink-0 md:ml-4 font-mono">2020 — 2025</span>
         </div>
-        <p class="text-flexoki-text font-bold mt-4 text-sm">GPA: 1.4</p>
+        <p class="text-flexoki-muted text-sm">HTW Dresden <span class="mx-2">&middot;</span> GPA: 1.4</p>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section>
-    <div class="flex items-center gap-4 mb-3">
-      <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-flexoki-muted whitespace-nowrap">Expertise</h2>
+    <div class="flex items-center gap-4 mb-6">
+      <h2 class="text-xs font-bold uppercase tracking-[0.25em] font-mono text-flexoki-muted whitespace-nowrap">Skills
+      </h2>
       <div class="h-px w-full bg-flexoki-ui"></div>
     </div>
-    
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
       <div>
-        <h4 class="text-[10px] font-bold uppercase text-flexoki-muted mb-3 tracking-[0.2em]">Languages</h4>
+        <h4 class="text-sm font-bold text-flexoki-text mb-3">Languages</h4>
         <div class="flex flex-wrap gap-2">
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">Python</span>
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">Java</span>
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">Kotlin</span>
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">Go</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">Python</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">Java
+            & Kotlin</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">Go</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">JavaScript</span>
         </div>
       </div>
       <div>
-        <h4 class="text-[10px] font-bold uppercase text-flexoki-muted mb-3 tracking-[0.2em]">Frontend</h4>
+        <h4 class="text-sm font-bold text-flexoki-text mb-3">Frontend</h4>
         <div class="flex flex-wrap gap-2">
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">HTML/CSS</span>
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">Bootstrap</span>
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">Vaadin</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">HTML
+            / CSS</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">Bootstrap</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">Vaadin</span>
         </div>
       </div>
       <div>
-        <h4 class="text-[10px] font-bold uppercase text-flexoki-muted mb-3 tracking-[0.2em]">Data</h4>
+        <h4 class="text-sm font-bold text-flexoki-text mb-3">Data</h4>
         <div class="flex flex-wrap gap-2">
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">SQL</span>
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">MongoDB</span>
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">Redis</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">SQL</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">MongoDB</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">Redis</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">ElasticSearch</span>
         </div>
       </div>
       <div>
-        <h4 class="text-[10px] font-bold uppercase text-flexoki-muted mb-3 tracking-[0.2em]">Tools</h4>
+        <h4 class="text-sm font-bold text-flexoki-text mb-3">Tools</h4>
         <div class="flex flex-wrap gap-2">
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">Git</span>
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">Docker</span>
-          <span class="px-2 py-1 bg-flexoki-paper border border-flexoki-ui rounded text-xs font-bold text-flexoki-text">Ansible</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">Git</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">Docker</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">Ansible</span>
+          <span
+            class="px-1.5 py-0.5 rounded border border-flexoki-ui bg-flexoki-paper text-flexoki-text text-xs font-mono">Azure
+            DevOps</span>
         </div>
       </div>
     </div>
