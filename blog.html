@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blogs
+---
+<div class="mb-10">
+  <h1 class="text-3xl font-bold text-flexoki-text tracking-tight">Blogs</h1>
+  <p class="text-flexoki-muted mt-2">Thoughts on software, automation, and learning.</p>
+</div>
+
+<div class="grid grid-cols-1 gap-4">
+  {% for post in site.posts %}
+  <article>
+    <a href="{{ post.url | relative_url }}" class="card block group">
+      <div class="flex justify-between items-start mb-1">
+        <h2 class="text-xl font-bold text-flexoki-text group-hover:underline decoration-flexoki-muted underline-offset-4">{{ post.title }}</h2>
+        <time class="text-xs font-bold uppercase tracking-widest text-flexoki-muted mt-1" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%b %d, %Y" }}
+        </time>
+      </div>
+      {% if post.description %}
+      <p class="text-flexoki-muted text-sm leading-relaxed max-w-2xl">
+        {{ post.description }}
+      </p>
+      {% endif %}
+    </a>
+  </article>
+  {% endfor %}
+</div>

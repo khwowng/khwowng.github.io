@@ -1,0 +1,13 @@
+<header class="py-4 border-b border-flexoki-ui">
+  <nav class="flex items-center justify-between">
+    <a href="{{ '/' | relative_url }}" class="text-2xl font-bold tracking-tighter text-flexoki-text hover:opacity-80 transition-opacity">
+      {{ site.title }}
+    </a>
+
+    <div class="flex items-center gap-6">
+      <a href="{{ '/about' | relative_url }}" class="nav-link {% if page.url contains '/about' %}active{% endif %}">about</a>
+      <a href="{{ '/blog' | relative_url }}" class="nav-link {% if page.url contains '/blog' %}active{% endif %}">blogs</a>
+      <a href="{{ '/project' | relative_url }}" class="nav-link {% if page.url contains '/project' %}active{% endif %}">projects</a>
+    </div>
+  </nav>
+</header>

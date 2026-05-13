@@ -1,0 +1,29 @@
+title: kth.
+description: Welcome to my website!
+url: "https://khwowng.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - node_modules/
+  - .github/
+  - src/
+  - .astro/
+  - public/
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - astro.config.mjs
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

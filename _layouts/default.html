@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Roboto', 'sans-serif'],
+          },
+          colors: {
+            flexoki: {
+              base: '#FFFCF0',
+              paper: '#F2F0E5',
+              overlay: '#E6E4D9',
+              ui: '#CECDC3',
+              text: '#100F0F',
+              muted: '#6F6E69',
+              red: '#D14D41',
+              orange: '#DA702C',
+              yellow: '#D0A215',
+              green: '#879A39',
+              cyan: '#3AA99F',
+              blue: '#4385BE',
+              purple: '#8B7EC8',
+              magenta: '#A02F6F',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply bg-flexoki-base text-flexoki-text selection:bg-flexoki-ui selection:text-flexoki-text;
+      }
+    }
+    
+    .prose {
+      @apply text-flexoki-text max-w-none;
+    }
+    .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+      @apply text-flexoki-text font-bold;
+    }
+    .prose a {
+      @apply text-flexoki-blue underline underline-offset-4 decoration-flexoki-ui hover:decoration-flexoki-blue transition-colors;
+    }
+    .prose blockquote {
+      @apply border-l-2 border-flexoki-ui text-flexoki-muted italic;
+    }
+    .prose code {
+      @apply text-flexoki-text bg-flexoki-paper px-1.5 py-0.5 rounded border border-flexoki-ui font-normal;
+    }
+    .prose pre {
+      @apply bg-flexoki-paper border border-flexoki-ui rounded-lg;
+    }
+    
+    .card {
+      @apply border border-flexoki-ui bg-flexoki-paper rounded-xl p-6 transition-all duration-300 hover:border-flexoki-muted hover:shadow-sm;
+    }
+    
+    .nav-link {
+      @apply text-sm uppercase tracking-widest font-bold text-flexoki-muted hover:text-flexoki-text transition-colors;
+    }
+    .nav-link.active {
+      @apply text-flexoki-text;
+    }
+  </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+  <div class="mx-auto w-full max-w-4xl px-6">
+    {% include header.html %}
+    <main class="py-6">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
+</body>
+</html>
